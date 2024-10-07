@@ -4,7 +4,7 @@ In short IMP,it is not a social media platform but rather it is an idea media pl
 
 ## Who is building this?
 
-Answer is `Community` | Hacktoberfest if ramping up and what could be the best time other than this.Go Check the Issues and start contributing. Before that have a look at the [CONTRIBUTING.md](CONTRIBUTING.md) file.
+Answer is `Community` | Hacktoberfest if ramping up and what could be the best time other than this.Go Check the Issues and start contributing. Before that have a look at the [CONTRIBUTING.md](CONTRIBUTING.md) file and [Discussions](https://github.com/blockx3/imp/discussions)
 
 ## Features to implement in IMP
 
