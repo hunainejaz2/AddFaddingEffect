@@ -1,36 +1,20 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Idea Media Platform
 
-## Getting Started
+In short IMP,it is not a social media platform but rather it is an idea media platform (obviously).This project is a part of out organization because as our community grow we will accept ideas of project, apps, website & all. So, this platform will be used to share ideas, discuss about them, and also to get feedback from the community. Based on the response we will decide whether to allow to start the project or not.
 
-First, run the development server:
+## Who is building this?
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Answer is `Community` | Hacktoberfest if ramping up and what could be the best time other than this.Go Check the Issues and start contributing. Before that have a look at the [CONTRIBUTING.md](CONTRIBUTING.md) file.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features to implement in IMP
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Registration with a username (username can be anything available).
+- People can write a post with the idea. The post will be MarkDown formatted.
+- Community can UP VOTE, DOWN VOTE, and COMMENT on the post.
+- The post can be tagged with a label. eg. `#webdev`, `#MobileApp`, `#AI`, `#BlockChain`, etc.
+- People can search for posts based on the label.
+- Very minimal and clean UI.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+> [!TIP]
+> Check this out to start working [CONTRIBUTING.md](CONTRIBUTING.md)
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
