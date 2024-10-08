@@ -1,6 +1,6 @@
 # Idea Media Platform
 
-In short IMP,it is not a social media platform but rather it is an idea media platform (obviously).This project is a part of out organization because as our community grow we will accept ideas of project, apps, website & all. So, this platform will be used to share ideas, discuss about them, and also to get feedback from the community. Based on the response we will decide whether to allow to start the project or not.
+In short IMP,it is not a social media platform but rather it is an idea media platform (obviously).This project is a part of our organization because as our community grow we will accept ideas of project, apps, website & all. So, this platform will be used to share ideas, discuss about them, and also to get feedback from the community. Based on the response we will decide whether to allow the start of project or not.
 
 ## Who is building this?
 
