@@ -1,23 +1,25 @@
-name: CI
+###### NEED TO BE RE-WRITTEN FOR TURBO REPO ######
 
-on:
-  pull_request:
-    branches: [main]
+# name: CI
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
+# on:
+#   pull_request:
+#     branches: [main]
 
-    steps:
-      - uses: actions/checkout@main
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
 
-      - name: Use Node.js
-        uses: actions/setup-node@main
-        with:
-          node-version: "18"
+#     steps:
+#       - uses: actions/checkout@main
 
-      - name: Install dependencies
-        run: npm ci
+#       - name: Use Node.js
+#         uses: actions/setup-node@main
+#         with:
+#           node-version: "18"
 
-      - name: Build Next.js app
-        run: npm run build
+#       - name: Install dependencies
+#         run: npm ci
+
+#       - name: Build Next.js app
+#         run: npm run build
