@@ -1,56 +1,58 @@
-FROM node:20-alpine AS base
+# THIS FILE NEEDS TO BE UPDATED TO USE WITH TURBO REPO
 
-# Stage 1: Install dependencies
-FROM base AS installer
+# FROM node:20-alpine AS base
 
-WORKDIR /usr/src/app
-RUN apk add --no-cache libc6-compat
-COPY package.json package-lock.json ./
+# # Stage 1: Install dependencies
+# FROM base AS installer
 
-RUN \
-    if [ -f package-lock.json ]; then \
-    npm ci --ignore-scripts; \
-    else \
-    echo "package-lock.json not found" && exit 1; \
-    fi
+# WORKDIR /usr/src/app
+# RUN apk add --no-cache libc6-compat
+# COPY package.json package-lock.json ./
 
-# Stage 2: Build stage
-FROM base AS builder
-WORKDIR /usr/src/app
+# RUN \
+#     if [ -f package-lock.json ]; then \
+#     npm ci --ignore-scripts; \
+#     else \
+#     echo "package-lock.json not found" && exit 1; \
+#     fi
 
-COPY --from=installer /usr/src/app/node_modules ./node_modules
-COPY prisma ./prisma
+# # Stage 2: Build stage
+# FROM base AS builder
+# WORKDIR /usr/src/app
 
-RUN npx prisma generate
+# COPY --from=installer /usr/src/app/node_modules ./node_modules
+# COPY prisma ./prisma
 
-COPY . .
+# RUN npx prisma generate
 
-RUN npm install sharp && npm run build
+# COPY . .
 
-# Stage 3: Run stage
-FROM base AS runner
-WORKDIR /usr/src/app
+# RUN npm install sharp && npm run build
 
-ENV NODE_ENV production
+# # Stage 3: Run stage
+# FROM base AS runner
+# WORKDIR /usr/src/app
 
-RUN addgroup --system --gid 1001 nodejs
-RUN adduser --system --uid 1001 nextjs
+# ENV NODE_ENV production
 
-# In future if you want to add public files to your app
-# COPY --from=builder usr/src/app/public ./public
+# RUN addgroup --system --gid 1001 nodejs
+# RUN adduser --system --uid 1001 nextjs
 
-RUN mkdir .next
-RUN chown nextjs:nodejs .next
+# # In future if you want to add public files to your app
+# # COPY --from=builder usr/src/app/public ./public
 
-USER nextjs
+# RUN mkdir .next
+# RUN chown nextjs:nodejs .next
 
-COPY --from=builder --chown=nextjs:nodejs /usr/src/app/.next/standalone ./
-COPY --from=builder --chown=nextjs:nodejs /usr/src/app/.next/static ./.next/static
+# USER nextjs
 
-EXPOSE 3000
+# COPY --from=builder --chown=nextjs:nodejs /usr/src/app/.next/standalone ./
+# COPY --from=builder --chown=nextjs:nodejs /usr/src/app/.next/static ./.next/static
 
-# For Standalone build
-ENV PORT 3000
-ENV HOSTNAME "0.0.0.0"
+# EXPOSE 3000
 
-CMD [ "node", "server.js" ]
+# # For Standalone build
+# ENV PORT 3000
+# ENV HOSTNAME "0.0.0.0"
+
+# CMD [ "node", "server.js" ]
