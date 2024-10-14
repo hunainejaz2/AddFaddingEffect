@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@auth/prisma-adapter": "^2.7.0",
     "@radix-ui/react-slot": "^1.1.0",
     "@repo/database": "workspace:*",
     "@repo/ui": "workspace:*",
@@ -16,6 +17,7 @@
     "clsx": "^2.1.1",
     "lucide-react": "^0.452.0",
     "next": "14.2.6",
+    "next-auth": "5.0.0-beta.22",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "tailwind-merge": "^2.5.3",
