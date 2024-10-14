@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import "@repo/ui/css";
+// import "@repo/ui/css"; // This is needed only if the importing project is not using shadcn ui
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
