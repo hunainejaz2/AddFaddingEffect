@@ -14,7 +14,26 @@ Answer is `Community` | Hacktoberfest if ramping up and what could be the best t
 - The post can be tagged with a label. eg. `#webdev`, `#MobileApp`, `#AI`, `#BlockChain`, etc.
 - People can search for posts based on the label.
 - Very minimal and clean UI.
+- [More...](https://github.com/blockx3/imp/discussions/3)
 
-> [!TIP]
-> Check this out to start working [CONTRIBUTING.md](CONTRIBUTING.md)
+## Setting up the project
+
+> [!IMPORTANT]
+> run `pnpm install` in the root directory to install all the dependencies.
+
+> ### 1. Setting up the database
+>
+> - Start a Postgres container in docker and copy the `.env-example` file to `.env` in `package/databse` folder as well as in `apps/web` and edit the database URL.
+> - Get a mongodb cluster from [Mongodb Atlas](https://www.mongodb.com/products/platform/atlas-product-tour) add edit the database url in `.env` accordingly
+> - Run `npm run prisma:generate` in the `packages/database`.
+> - Run `npm run prisma:migrate:pg` in the `packages/database` to migrate schema to postgres database.
+
+> ### 2. Running The Project
+>
+> - Fill the `.env` file with required environment variables.
+> - Run `pnpm dev` in the root directory to start the development server.
+
+> [!IMPORTANT]
+> ## Guidelines
+> - Any reusable kind of UI component is to be created in the `UI` package in the folder `packages/ui` which uses `shadcn-ui` and `tailwindcss` for styling.
 
