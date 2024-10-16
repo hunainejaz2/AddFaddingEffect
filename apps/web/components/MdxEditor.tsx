@@ -9,7 +9,7 @@ const Mdxeditor = dynamic(
 function MdxeditorComponent() {
   return (
     <div className="">
-      <Mdxeditor markdown="" className="prose max-w-none bg-slate-200" />
+      <Mdxeditor markdown="" className="prose max-w-none" />
     </div>
   );
 }
