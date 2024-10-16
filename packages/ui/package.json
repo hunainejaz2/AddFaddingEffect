@@ -5,10 +5,11 @@
     "build": "tsup src/index.tsx --minify --dts --out-dir dist",
     "dev": "tsup src/index.tsx --watch --dts --out-dir dist"
   },
+  "type": "module",
   "exports": {
     ".": {
-      "import": "./dist/index.js",
-      "require": "./dist/index.js"
+      "import": "./dist/index.cjs",
+      "require": "./dist/index.cjs"
     },
     "./css": {
       "import": "./dist/index.css",
@@ -27,6 +28,7 @@
     "tsup": "^8.3.0"
   },
   "dependencies": {
+    "@mdxeditor/editor": "^3.14.0",
     "@radix-ui/react-slot": "^1.1.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
