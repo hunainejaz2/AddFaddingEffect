@@ -1,3 +1,8 @@
 import "./global.css";
+export {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@/src/components/ui/avatar";
 export { Button } from "@/src/components/ui/button";
-export { Mdxeditor } from "@/src/components/MdxEditor/MdxEditor";
+export { Mdxeditor, MdxViewer } from "@/src/components/MdxEditor/MdxComponent";

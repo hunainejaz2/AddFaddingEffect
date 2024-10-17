@@ -18,8 +18,7 @@ import {
   InsertAdmonition,
 } from "@mdxeditor/editor";
 
-// Only import this to the next file
-export default function InitializedMDXEditor({
+export function InitializedMDXEditor({
   editorRef,
   ...props
 }: { editorRef: ForwardedRef<MDXEditorMethods> | null } & MDXEditorProps) {
@@ -38,8 +37,6 @@ export default function InitializedMDXEditor({
           toolbarContents() {
             return (
               <>
-                {" "}
-                <UndoRedo />
                 <BoldItalicUnderlineToggles />
                 <BlockTypeSelect />
                 <InsertAdmonition />
@@ -48,6 +45,27 @@ export default function InitializedMDXEditor({
             );
           },
         }),
+      ]}
+      {...props}
+      ref={editorRef}
+    />
+  );
+}
+export function InitializedMDXViewer({
+  editorRef,
+  ...props
+}: { editorRef: ForwardedRef<MDXEditorMethods> | null } & MDXEditorProps) {
+  return (
+    <MDXEditor
+      plugins={[
+        directivesPlugin({
+          directiveDescriptors: [AdmonitionDirectiveDescriptor],
+        }),
+        headingsPlugin(),
+        listsPlugin(),
+        quotePlugin(),
+        thematicBreakPlugin(),
+        markdownShortcutPlugin(),
       ]}
       {...props}
       ref={editorRef}
