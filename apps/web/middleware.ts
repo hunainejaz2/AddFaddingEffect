@@ -13,3 +13,6 @@
 //    */
 //   matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"],
 // };
+
+// It is a lace holder function for now
+export default function middleware() {}
