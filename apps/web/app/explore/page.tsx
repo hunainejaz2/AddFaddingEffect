@@ -1,5 +1,5 @@
-import { Suspense } from "react";
-import Explore_PostList from "./Posts";
+// import { Suspense } from "react";
+// import Explore_PostList from "./Posts";
 import UserSection from "./UserSection";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
